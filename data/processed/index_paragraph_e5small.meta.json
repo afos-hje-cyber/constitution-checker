@@ -1,0 +1,16 @@
+{
+  "model": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "strategy": "paragraph",
+  "prefix_version": "v1_basic",
+  "passage_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "normalised": true,
+  "chunk_count": 844,
+  "dimension": 384,
+  "max_seq_length": 512,
+  "hybrid_max_words": null,
+  "truncated_chunks": [],
+  "sentence_transformers_version": "6.2.0",
+  "built_at": "2026-10-25T21:57:21+00:00"
+}

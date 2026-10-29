@@ -1,0 +1,1188 @@
+{
+  "experiment": "rerank",
+  "created_at": "2026-10-27T17:33:55+00:00",
+  "cases": 24,
+  "set": "dev",
+  "reranker": {
+    "model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    "revision": "1427fd652930e4ba29e8149678df786c240d8825"
+  },
+  "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "cpu": {
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "logical_cores": 22,
+    "torch_threads": 16
+  },
+  "ram_mb": {
+    "start": 456,
+    "e5_loaded": 1275,
+    "e5_and_reranker_loaded": 2085,
+    "peak": 2382
+  },
+  "summary": {
+    "A": {
+      "label": "hybrid k=8",
+      "k": 8,
+      "rerank_pool": null,
+      "hits": 20,
+      "hit_rate": 0.8333333333333334,
+      "hit_at_8": 0.8333333333333334,
+      "mean_rank": 5.5,
+      "mrr": 0.6500210437710437,
+      "not_found": 0,
+      "latency_ms": 23.156941669488635,
+      "added_ms": 0.0,
+      "regressions": [],
+      "improvements": []
+    },
+    "B": {
+      "label": "hybrid k=10",
+      "k": 10,
+      "rerank_pool": null,
+      "hits": 22,
+      "hit_rate": 0.9166666666666666,
+      "hit_at_8": 0.8333333333333334,
+      "mean_rank": 5.5,
+      "mrr": 0.6500210437710437,
+      "not_found": 0,
+      "latency_ms": 23.156941669488635,
+      "added_ms": 0.0,
+      "regressions": [],
+      "improvements": [
+        20,
+        42
+      ]
+    },
+    "C": {
+      "label": "rerank top 30 -> 8",
+      "k": 8,
+      "rerank_pool": 30,
+      "hits": 20,
+      "hit_rate": 0.8333333333333334,
+      "hit_at_8": 0.8333333333333334,
+      "mean_rank": 5.083333333333333,
+      "mrr": 0.7109217171717171,
+      "not_found": 1,
+      "latency_ms": 1864.5325875016472,
+      "added_ms": 1841.3756458321586,
+      "regressions": [
+        1,
+        2
+      ],
+      "improvements": [
+        20,
+        42
+      ]
+    },
+    "D": {
+      "label": "rerank top 50 -> 8",
+      "k": 8,
+      "rerank_pool": 50,
+      "hits": 20,
+      "hit_rate": 0.8333333333333334,
+      "hit_at_8": 0.8333333333333334,
+      "mean_rank": 4.333333333333333,
+      "mrr": 0.7114756158873806,
+      "not_found": 0,
+      "latency_ms": 2745.945204180316,
+      "added_ms": 2722.7882625108273,
+      "regressions": [
+        1,
+        2
+      ],
+      "improvements": [
+        20,
+        42
+      ]
+    }
+  },
+  "per_case": [
+    {
+      "id": 1,
+      "proposal": "Reintroduzir a pena de morte",
+      "expected_articles": [
+        24
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 12,
+        "D": 17
+      },
+      "top8": {
+        "A": [
+          "art24",
+          "art27_n3",
+          "art278_n8",
+          "art130",
+          "art115_n8",
+          "art30",
+          "art33_n6",
+          "art28"
+        ],
+        "C": [
+          "art28",
+          "art33_n6",
+          "art32_n8",
+          "art27_n5",
+          "art19_n4",
+          "art31",
+          "art131",
+          "art292"
+        ],
+        "D": [
+          "art28",
+          "art62",
+          "art33_n6",
+          "art32_n8",
+          "art27_n5",
+          "art19_n4",
+          "art19_n8",
+          "art278_n5"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "proposal": "Instituir a prisão perpétua para crimes de terrorismo",
+      "expected_articles": [
+        30
+      ],
+      "ranks": {
+        "A": 6,
+        "B": 6,
+        "C": 10,
+        "D": 13
+      },
+      "top8": {
+        "A": [
+          "art27_n3",
+          "art130",
+          "art196",
+          "art134",
+          "art31",
+          "art30",
+          "art33_n3",
+          "art207"
+        ],
+        "C": [
+          "art28",
+          "art33_n4",
+          "art27_n3",
+          "art33_n3",
+          "art27_n5",
+          "art31",
+          "art33_n8",
+          "art27_n4"
+        ],
+        "D": [
+          "art28",
+          "art33_n4",
+          "art27_n3",
+          "art33_n3",
+          "art32_n8",
+          "art27_n5",
+          "art292",
+          "art34"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "proposal": "Permitir escutas telefónicas sem autorização de um juiz",
+      "expected_articles": [
+        34
+      ],
+      "ranks": {
+        "A": 2,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art27_n3",
+          "art34",
+          "art32_n9",
+          "art204",
+          "art283",
+          "art157",
+          "art223_n2",
+          "art31"
+        ],
+        "C": [
+          "art34",
+          "art38_n7",
+          "art216",
+          "art32_n9",
+          "art165_n3",
+          "art32_n4",
+          "art196",
+          "art37"
+        ],
+        "D": [
+          "art34",
+          "art32_n6",
+          "art38_n7",
+          "art216",
+          "art32_n9",
+          "art45",
+          "art165_n3",
+          "art281_n2"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "proposal": "Criar uma religião oficial do Estado",
+      "expected_articles": [
+        41
+      ],
+      "ranks": {
+        "A": 4,
+        "B": 4,
+        "C": 2,
+        "D": 2
+      },
+      "top8": {
+        "A": [
+          "art144",
+          "art43",
+          "art73",
+          "art41",
+          "art9",
+          "art134",
+          "art75",
+          "art199"
+        ],
+        "C": [
+          "art43",
+          "art41",
+          "art133",
+          "art81",
+          "art78",
+          "art288",
+          "art51",
+          "art183"
+        ],
+        "D": [
+          "art43",
+          "art41",
+          "art133",
+          "art81",
+          "art78",
+          "art288",
+          "art51",
+          "art183"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "proposal": "Obrigar os jornais a submeter artigos a aprovação prévia do Governo",
+      "expected_articles": [
+        37,
+        38
+      ],
+      "ranks": {
+        "A": 30,
+        "B": 30,
+        "C": 22,
+        "D": 34
+      },
+      "top8": {
+        "A": [
+          "art134",
+          "art197_n1",
+          "art192",
+          "art119_n1",
+          "art169_n1",
+          "art161",
+          "art288",
+          "art168_n6"
+        ],
+        "C": [
+          "art115_n8",
+          "art192",
+          "art169_n1",
+          "art278_n4",
+          "art119_n1",
+          "art134",
+          "art133",
+          "art161"
+        ],
+        "D": [
+          "art115_n8",
+          "art278_n1",
+          "art192",
+          "art169_n1",
+          "art185",
+          "art278_n4",
+          "art119_n1",
+          "art134"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "proposal": "Proibir greves nos transportes públicos",
+      "expected_articles": [
+        57
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art57",
+          "art53",
+          "art270",
+          "art269",
+          "art89",
+          "art257",
+          "art180_n2",
+          "art188"
+        ],
+        "C": [
+          "art57",
+          "art53",
+          "art89",
+          "art270",
+          "art52",
+          "art65_n2",
+          "art136_n3",
+          "art59_n3"
+        ],
+        "D": [
+          "art57",
+          "art53",
+          "art89",
+          "art270",
+          "art169_n6",
+          "art52",
+          "art65_n2",
+          "art136_n3"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "proposal": "Tornar o ensino básico pago",
+      "expected_articles": [
+        74
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art74",
+          "art75",
+          "art43",
+          "art76",
+          "art67",
+          "art73",
+          "art9",
+          "art95"
+        ],
+        "C": [
+          "art74",
+          "art76",
+          "art75",
+          "art47",
+          "art64_n2",
+          "art59_n2",
+          "art73",
+          "art43"
+        ],
+        "D": [
+          "art74",
+          "art168_n4",
+          "art76",
+          "art75",
+          "art47",
+          "art169_n4",
+          "art64_n2",
+          "art59_n2"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "proposal": "Extinguir o Serviço Nacional de Saúde",
+      "expected_articles": [
+        64
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art64_n4",
+          "art64_n3",
+          "art64_n2",
+          "art276",
+          "art27_n3",
+          "art227_n1_i-q",
+          "art19_n7",
+          "art38_n5"
+        ],
+        "C": [
+          "art64_n4",
+          "art64_n3",
+          "art64_n2",
+          "art19_n2",
+          "art165_n1_a-o",
+          "art19_n4",
+          "art19_n1",
+          "art27_n3"
+        ],
+        "D": [
+          "art64_n4",
+          "art64_n3",
+          "art64_n2",
+          "art19_n2",
+          "art165_n1_a-o",
+          "art19_n4",
+          "art19_n1",
+          "art27_n3"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "proposal": "Reduzir o número de deputados para 150",
+      "expected_articles": [
+        148
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art148",
+          "art152",
+          "art171",
+          "art160",
+          "art154",
+          "art159",
+          "art155",
+          "art153"
+        ],
+        "C": [
+          "art148",
+          "art160",
+          "art150",
+          "art153",
+          "art133",
+          "art169_n1",
+          "art157",
+          "art155"
+        ],
+        "D": [
+          "art148",
+          "art160",
+          "art150",
+          "art165_n1_a-o",
+          "art153",
+          "art133",
+          "art124",
+          "art169_n1"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "proposal": "Permitir que o Presidente da República cumpra três mandatos seguidos",
+      "expected_articles": [
+        123
+      ],
+      "ranks": {
+        "A": 2,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art223_n2",
+          "art123",
+          "art134",
+          "art128",
+          "art136_n5",
+          "art130",
+          "art163",
+          "art127"
+        ],
+        "C": [
+          "art123",
+          "art131",
+          "art128",
+          "art133",
+          "art129",
+          "art132",
+          "art126",
+          "art134"
+        ],
+        "D": [
+          "art123",
+          "art131",
+          "art128",
+          "art133",
+          "art129",
+          "art278_n7",
+          "art132",
+          "art126"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "proposal": "Expulsar do país cidadãos portugueses condenados por crimes graves",
+      "expected_articles": [
+        33
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art33_n3",
+          "art33_n4",
+          "art33_n1",
+          "art15",
+          "art33_n8",
+          "art27_n3",
+          "art33_n2",
+          "art134"
+        ],
+        "C": [
+          "art33_n3",
+          "art33_n1",
+          "art33_n4",
+          "art7_n7",
+          "art4",
+          "art27_n3",
+          "art29",
+          "art134"
+        ],
+        "D": [
+          "art33_n3",
+          "art33_n1",
+          "art33_n4",
+          "art7_n7",
+          "art4",
+          "art27_n3",
+          "art29",
+          "art134"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "proposal": "Aumentar o investimento público em energias renováveis",
+      "expected_articles": [
+        66,
+        81
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art81",
+          "art288",
+          "art197_n1",
+          "art227_n1_i-q",
+          "art89",
+          "art66_n2",
+          "art227_n1_r-x",
+          "art109"
+        ],
+        "C": [
+          "art81",
+          "art66_n2",
+          "art167_n2",
+          "art105",
+          "art89",
+          "art133",
+          "art95",
+          "art167_n3"
+        ],
+        "D": [
+          "art81",
+          "art227_n4",
+          "art146",
+          "art227_n2",
+          "art118",
+          "art65_n3",
+          "art66_n2",
+          "art165_n5"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "proposal": "Baixar a idade mínima de voto para os 16 anos",
+      "expected_articles": [
+        49
+      ],
+      "ranks": {
+        "A": 9,
+        "B": 9,
+        "C": 2,
+        "D": 2
+      },
+      "top8": {
+        "A": [
+          "art126",
+          "art122",
+          "art152",
+          "art148",
+          "art113",
+          "art128",
+          "art167_n6",
+          "art171"
+        ],
+        "C": [
+          "art122",
+          "art49",
+          "art48",
+          "art109",
+          "art72",
+          "art66_n1",
+          "art148",
+          "art160"
+        ],
+        "D": [
+          "art122",
+          "art49",
+          "art48",
+          "art109",
+          "art115_n7",
+          "art72",
+          "art115_n1",
+          "art66_n1"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "proposal": "Exigir autorização prévia do Estado para publicar livros",
+      "expected_articles": [
+        37,
+        42
+      ],
+      "ranks": {
+        "A": 44,
+        "B": 44,
+        "C": null,
+        "D": 13
+      },
+      "top8": {
+        "A": [
+          "art73",
+          "art165_n3",
+          "art165_n4",
+          "art227_n2",
+          "art74",
+          "art112_n2",
+          "art233",
+          "art278_n4"
+        ],
+        "C": [
+          "art112_n2",
+          "art134",
+          "art119_n1",
+          "art227_n3",
+          "art165_n3",
+          "art165_n4",
+          "art233",
+          "art227_n2"
+        ],
+        "D": [
+          "art119_n2",
+          "art112_n2",
+          "art134",
+          "art119_n1",
+          "art227_n3",
+          "art165_n3",
+          "art165_n4",
+          "art233"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "proposal": "Permitir à polícia entrar em casas durante a noite sem mandado",
+      "expected_articles": [
+        34
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art34",
+          "art27_n3",
+          "art272",
+          "art33_n2",
+          "art45",
+          "art28",
+          "art27_n4",
+          "art29"
+        ],
+        "C": [
+          "art34",
+          "art53",
+          "art27_n5",
+          "art32_n6",
+          "art27_n2",
+          "art32_n8",
+          "art27_n4",
+          "art45"
+        ],
+        "D": [
+          "art34",
+          "art57",
+          "art53",
+          "art27_n5",
+          "art32_n6",
+          "art27_n2",
+          "art32_n8",
+          "art32_n7"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "proposal": "Tirar os filhos aos pais sem decisão de um tribunal",
+      "expected_articles": [
+        36
+      ],
+      "ranks": {
+        "A": 4,
+        "B": 4,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art67",
+          "art205",
+          "art33_n2",
+          "art36",
+          "art32_n9",
+          "art206",
+          "art27_n3",
+          "art33_n6"
+        ],
+        "C": [
+          "art36",
+          "art33_n7",
+          "art68",
+          "art69",
+          "art206",
+          "art67",
+          "art33_n6",
+          "art32_n9"
+        ],
+        "D": [
+          "art36",
+          "art33_n7",
+          "art68",
+          "art203",
+          "art204",
+          "art69",
+          "art206",
+          "art67"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "proposal": "Permitir despedir trabalhadores por causa das suas opiniões políticas",
+      "expected_articles": [
+        53
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art53",
+          "art276",
+          "art59_n1",
+          "art288",
+          "art59_n2",
+          "art195",
+          "art58",
+          "art15"
+        ],
+        "C": [
+          "art53",
+          "art269",
+          "art57",
+          "art59_n1",
+          "art59_n2",
+          "art94",
+          "art117",
+          "art129"
+        ],
+        "D": [
+          "art53",
+          "art269",
+          "art57",
+          "art59_n1",
+          "art59_n2",
+          "art271",
+          "art94",
+          "art167_n6"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "proposal": "Confiscar terrenos privados sem pagar nada aos donos",
+      "expected_articles": [
+        62
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art62",
+          "art86",
+          "art94",
+          "art96",
+          "art95",
+          "art66_n2",
+          "art84",
+          "art293_n2"
+        ],
+        "C": [
+          "art62",
+          "art94",
+          "art84",
+          "art165_n1_a-o",
+          "art65_n1",
+          "art293_n1",
+          "art95",
+          "art34"
+        ],
+        "D": [
+          "art62",
+          "art94",
+          "art65_n4",
+          "art84",
+          "art165_n1_a-o",
+          "art65_n1",
+          "art293_n1",
+          "art95"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "proposal": "Proibir casamentos entre pessoas de nacionalidades diferentes",
+      "expected_articles": [
+        36,
+        13
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "top8": {
+        "A": [
+          "art36",
+          "art15",
+          "art13",
+          "art35_n5",
+          "art115_n1",
+          "art65_n1",
+          "art44",
+          "art67"
+        ],
+        "C": [
+          "art35_n5",
+          "art36",
+          "art13",
+          "art122",
+          "art67",
+          "art115_n1",
+          "art4",
+          "art109"
+        ],
+        "D": [
+          "art35_n5",
+          "art36",
+          "art13",
+          "art122",
+          "art111",
+          "art67",
+          "art62",
+          "art115_n1"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "proposal": "Proibir o ensino privado",
+      "expected_articles": [
+        43,
+        75
+      ],
+      "ranks": {
+        "A": 2,
+        "B": 2,
+        "C": 3,
+        "D": 3
+      },
+      "top8": {
+        "A": [
+          "art74",
+          "art43",
+          "art75",
+          "art76",
+          "art77",
+          "art64_n3",
+          "art73",
+          "art70"
+        ],
+        "C": [
+          "art69",
+          "art74",
+          "art43",
+          "art75",
+          "art47",
+          "art73",
+          "art64_n2",
+          "art70"
+        ],
+        "D": [
+          "art69",
+          "art74",
+          "art43",
+          "art75",
+          "art47",
+          "art73",
+          "art64_n2",
+          "art27_n3"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "proposal": "Criar uma rede de creches públicas",
+      "expected_articles": [
+        67
+      ],
+      "ranks": {
+        "A": 10,
+        "B": 10,
+        "C": 2,
+        "D": 2
+      },
+      "top8": {
+        "A": [
+          "art75",
+          "art43",
+          "art144",
+          "art74",
+          "art255",
+          "art257",
+          "art247",
+          "art267"
+        ],
+        "C": [
+          "art75",
+          "art67",
+          "art74",
+          "art256",
+          "art247",
+          "art255",
+          "art35_n6",
+          "art43"
+        ],
+        "D": [
+          "art75",
+          "art67",
+          "art74",
+          "art65_n2",
+          "art263",
+          "art256",
+          "art65_n3",
+          "art247"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "proposal": "Apoiar os agricultores contra prejuízos causados por secas",
+      "expected_articles": [
+        93,
+        97
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art97",
+          "art93_n1",
+          "art98",
+          "art95",
+          "art94",
+          "art66_n2",
+          "art63",
+          "art223_n2"
+        ],
+        "C": [
+          "art97",
+          "art66_n2",
+          "art93_n1",
+          "art95",
+          "art96",
+          "art93_n2",
+          "art94",
+          "art81"
+        ],
+        "D": [
+          "art97",
+          "art66_n2",
+          "art93_n1",
+          "art95",
+          "art88",
+          "art96",
+          "art93_n2",
+          "art94"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "proposal": "Proibir a publicidade enganosa",
+      "expected_articles": [
+        60
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "top8": {
+        "A": [
+          "art60",
+          "art119_n2",
+          "art119_n3",
+          "art35_n4",
+          "art32_n2",
+          "art281_n2",
+          "art167_n6",
+          "art38_n3"
+        ],
+        "C": [
+          "art60",
+          "art34",
+          "art281_n2",
+          "art35_n7",
+          "art35_n4",
+          "art119_n2",
+          "art38_n6",
+          "art119_n3"
+        ],
+        "D": [
+          "art60",
+          "art32_n8",
+          "art34",
+          "art281_n2",
+          "art35_n7",
+          "art35_n4",
+          "art119_n2",
+          "art52"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "proposal": "Aumentar o IVA da restauração",
+      "expected_articles": [
+        103,
+        104
+      ],
+      "ranks": {
+        "A": 6,
+        "B": 6,
+        "C": 2,
+        "D": 2
+      },
+      "top8": {
+        "A": [
+          "art66_n2",
+          "art95",
+          "art81",
+          "art293_n1",
+          "art59_n2",
+          "art104",
+          "art161",
+          "art227_n1_i-q"
+        ],
+        "C": [
+          "art95",
+          "art104",
+          "art94",
+          "art293_n1",
+          "art165_n5",
+          "art85",
+          "art59_n2",
+          "art133"
+        ],
+        "D": [
+          "art95",
+          "art104",
+          "art94",
+          "art59_n3",
+          "art97",
+          "art293_n1",
+          "art165_n5",
+          "art85"
+        ]
+      }
+    }
+  ]
+}

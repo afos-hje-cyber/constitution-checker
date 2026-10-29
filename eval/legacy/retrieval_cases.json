@@ -1,0 +1,15 @@
+[
+  {"id": 1,  "proposal": "Reintroduzir a pena de morte", "expected_articles": [24]},
+  {"id": 2,  "proposal": "Instituir a prisão perpétua para crimes de terrorismo", "expected_articles": [30]},
+  {"id": 3,  "proposal": "Permitir escutas telefónicas sem autorização de um juiz", "expected_articles": [34]},
+  {"id": 4,  "proposal": "Criar uma religião oficial do Estado", "expected_articles": [41]},
+  {"id": 5,  "proposal": "Obrigar os jornais a submeter artigos a aprovação prévia do Governo", "expected_articles": [37, 38]},
+  {"id": 6,  "proposal": "Proibir greves nos transportes públicos", "expected_articles": [57]},
+  {"id": 7,  "proposal": "Tornar o ensino básico pago", "expected_articles": [74]},
+  {"id": 8,  "proposal": "Extinguir o Serviço Nacional de Saúde", "expected_articles": [64]},
+  {"id": 9,  "proposal": "Reduzir o número de deputados para 150", "expected_articles": [148]},
+  {"id": 10, "proposal": "Permitir que o Presidente da República cumpra três mandatos seguidos", "expected_articles": [123]},
+  {"id": 11, "proposal": "Expulsar do país cidadãos portugueses condenados por crimes graves", "expected_articles": [33]},
+  {"id": 12, "proposal": "Aumentar o investimento público em energias renováveis", "expected_articles": [66, 81],
+   "note": "81.º m) is national energy policy; added after run 1 on legal grounds, not on score."}
+]

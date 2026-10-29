@@ -1,0 +1,156 @@
+{
+  "experiment": "missing_info_retrieval",
+  "created_at": "2026-10-27T18:00:36+00:00",
+  "source_run": "baseline_v1_dev24.json",
+  "strategy": "hybrid",
+  "depth": 30,
+  "gemini_calls": 0,
+  "cases": [
+    {
+      "id": 5,
+      "proposal": "Obrigar os jornais a submeter artigos a aprovação prévia do Governo",
+      "missing_information": "Faltam excertos da Constituição relativos aos direitos, liberdades e garantias fundamentais, em particular os artigos que consagram a liberdade de imprensa, a liberdade de expressão e a proibição de censura prévia.",
+      "expected_articles": [
+        37,
+        38
+      ],
+      "runs": {
+        "0_proposal": {
+          "ranks": {
+            "37": null,
+            "38": 30
+          },
+          "top5": [
+            "134",
+            "197_n1",
+            "192",
+            "119_n1",
+            "169_n1"
+          ]
+        },
+        "a_missing_info": {
+          "ranks": {
+            "37": 6,
+            "38": 8
+          },
+          "top5": [
+            "288",
+            "27_n3",
+            "16",
+            "9",
+            "18"
+          ]
+        },
+        "b_proposal_plus_missing_info": {
+          "ranks": {
+            "37": 5,
+            "38": 10
+          },
+          "top5": [
+            "288",
+            "223_n2",
+            "134",
+            "27_n3",
+            "37"
+          ]
+        }
+      }
+    },
+    {
+      "id": 20,
+      "proposal": "Baixar a idade mínima de voto para os 16 anos",
+      "missing_information": "Faltam excertos constitucionais que definam a capacidade eleitoral ativa (quem pode votar) e a idade mínima para o exercício do direito de voto.",
+      "expected_articles": [
+        49
+      ],
+      "runs": {
+        "0_proposal": {
+          "ranks": {
+            "49": 9
+          },
+          "top5": [
+            "126",
+            "122",
+            "152",
+            "148",
+            "113"
+          ]
+        },
+        "a_missing_info": {
+          "ranks": {
+            "49": null
+          },
+          "top5": [
+            "223_n2",
+            "288",
+            "27_n3",
+            "59_n2",
+            "55_n6"
+          ]
+        },
+        "b_proposal_plus_missing_info": {
+          "ranks": {
+            "49": null
+          },
+          "top5": [
+            "223_n2",
+            "288",
+            "27_n3",
+            "59_n2",
+            "67"
+          ]
+        }
+      }
+    },
+    {
+      "id": 35,
+      "proposal": "Exigir autorização prévia do Estado para publicar livros",
+      "missing_information": "Faltam excertos constitucionais que regulem a liberdade de expressão, a liberdade de imprensa e a proibição da censura, bem como mais pormenores sobre o âmbito e a aplicação prática da medida proposta.",
+      "expected_articles": [
+        37,
+        42
+      ],
+      "runs": {
+        "0_proposal": {
+          "ranks": {
+            "37": null,
+            "42": null
+          },
+          "top5": [
+            "73",
+            "165_n3",
+            "165_n4",
+            "227_n2",
+            "74"
+          ]
+        },
+        "a_missing_info": {
+          "ranks": {
+            "37": 4,
+            "42": null
+          },
+          "top5": [
+            "288",
+            "27_n3",
+            "223_n2",
+            "37",
+            "119_n1"
+          ]
+        },
+        "b_proposal_plus_missing_info": {
+          "ranks": {
+            "37": 3,
+            "42": null
+          },
+          "top5": [
+            "288",
+            "27_n3",
+            "37",
+            "223_n2",
+            "119_n1"
+          ]
+        }
+      }
+    }
+  ]
+}

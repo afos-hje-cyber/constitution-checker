@@ -1,0 +1,25 @@
+# Packages imported directly by the project (not a full pip freeze).
+pymupdf==2.0
+sentence-transformers==6.2.0
+transformers==5.20.2
+# Imported directly by src/common/embeddings.py (snapshot_download); installed with sentence-transformers.
+huggingface_hub==2.3.0
+numpy==2.4.6
+google-genai==2.33.0
+python-dotenv==1.2.4
+# Imported directly by src/rag/llm.py to classify network errors; installed with google-genai.
+httpx==0.28.1
+streamlit==1.66.1
+# zoneinfo needs the IANA time zone database on Windows (midnight Pacific reset).
+tzdata==2026.5
+# Used only by eval scripts (RAM measurement); already a dependency of other packages.
+psutil==7.2.2
+
+# torch (used through sentence-transformers), CPU-only.
+# Linux (Streamlit Community Cloud): the CPU wheel straight from the PyTorch
+# index. The default Linux wheel on PyPI pulls in the CUDA libraries (several
+# GB). The URL is for Python 3.11 on x86_64, so the Cloud app must use Python 3.11.
+torch @ https://download.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl ; sys_platform == "linux"
+# Windows/macOS: the PyPI wheel is already CPU-only. "==2.14.1" also matches
+# the local "2.14.1+cpu" build.
+torch==2.14.1 ; sys_platform != "linux"

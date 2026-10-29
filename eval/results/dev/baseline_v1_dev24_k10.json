@@ -1,0 +1,2547 @@
+{
+  "run": "baseline_v1_dev24_k10",
+  "created_at": "2026-10-27T17:48:05+00:00",
+  "git": {
+    "commit": "74e847a",
+    "dirty": false
+  },
+  "config": {
+    "strategy": "hybrid",
+    "k": 10,
+    "rank_depth": 30,
+    "prefix_version": "v1_basic",
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "llm_provider": "gemini",
+    "llm_model": "gemini-3.5-flash-lite",
+    "llm_model_version": "3.5-flash-lite-07-2026",
+    "temperature": 0,
+    "prompt_version": "assess_v1",
+    "query_rewriting": null
+  },
+  "api_calls_total": 28,
+  "cache_hits_total": 0,
+  "sets": [
+    "dev"
+  ],
+  "freezes": [
+    {
+      "batch": 1,
+      "frozen_at": "2026-10-27T15:50:26Z",
+      "ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "batch": 2,
+      "frozen_at": "2026-10-27T16:16:02Z",
+      "ids": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    }
+  ],
+  "answer_provenance": {
+    "2026-10-27": 24
+  },
+  "answers_before_freeze": [],
+  "metrics": {
+    "dev": {
+      "cases": 24,
+      "retrieval_cases": 24,
+      "hit_rate": {
+        "@5": 0.75,
+        "@8": 0.8333333333333334,
+        "@10": 0.9166666666666666,
+        "@12": 0.9166666666666666
+      },
+      "label_accuracy": 0.9166666666666666,
+      "label_and_reason_accuracy": 0.9166666666666666,
+      "citation_accuracy_conflict": 0.8888888888888888,
+      "conflict_cases": 18,
+      "citation_accuracy_all": 0.9166666666666666,
+      "unclear_rate": 0.08333333333333333,
+      "rejected_items": 0,
+      "api_calls": 28,
+      "confusion": {
+        "potential_conflict": {
+          "likely_compatible": 0,
+          "potential_conflict": 16,
+          "unclear": 2,
+          "hits": 16
+        },
+        "likely_compatible": {
+          "likely_compatible": 4,
+          "potential_conflict": 0,
+          "unclear": 0,
+          "hits": 4
+        },
+        "borderline": {
+          "likely_compatible": 1,
+          "potential_conflict": 1,
+          "unclear": 0,
+          "hits": 2
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": 1,
+      "set": "dev",
+      "proposal": "Reintroduzir a pena de morte",
+      "expected_articles": [
+        24
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 24,
+          "n": null,
+          "alinea": null,
+          "explanation": "O artigo 24.º estabelece que a vida humana é inviolável e proíbe em caso algum a pena de morte."
+        },
+        {
+          "article": 24,
+          "n": 1,
+          "alinea": null,
+          "explanation": "referido no raciocínio"
+        },
+        {
+          "article": 24,
+          "n": 2,
+          "alinea": null,
+          "explanation": "referido no raciocínio"
+        }
+      ],
+      "cited_articles": [
+        24
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de reintrodução da pena de morte entra em direto conflito com o princípio de que a vida humana é inviolável e com a proibição absoluta da pena de morte consagrada na Constituição.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [
+        "citação acrescentada: artigo 24.º, n.º 1 (referido no texto)",
+        "citação acrescentada: artigo 24.º, n.º 2 (referido no texto)"
+      ],
+      "usage": {
+        "input_tokens": 2128,
+        "output_tokens": 215,
+        "thinking_tokens": 0,
+        "total_tokens": 2343
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art24",
+          "article": 24,
+          "score": 0.8608
+        },
+        {
+          "chunk_id": "art27_n3",
+          "article": 27,
+          "score": 0.8558
+        },
+        {
+          "chunk_id": "art278_n8",
+          "article": 278,
+          "score": 0.8525
+        },
+        {
+          "chunk_id": "art130",
+          "article": 130,
+          "score": 0.8516
+        },
+        {
+          "chunk_id": "art115_n8",
+          "article": 115,
+          "score": 0.8513
+        },
+        {
+          "chunk_id": "art30",
+          "article": 30,
+          "score": 0.8508
+        },
+        {
+          "chunk_id": "art33_n6",
+          "article": 33,
+          "score": 0.8494
+        },
+        {
+          "chunk_id": "art28",
+          "article": 28,
+          "score": 0.8479
+        },
+        {
+          "chunk_id": "art32_n7",
+          "article": 32,
+          "score": 0.8476
+        },
+        {
+          "chunk_id": "art29",
+          "article": 29,
+          "score": 0.8467
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:44:12+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 2,
+      "set": "dev",
+      "proposal": "Instituir a prisão perpétua para crimes de terrorismo",
+      "expected_articles": [
+        30
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 6,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 30,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Estabelece a proibição expressa de penas ou medidas de segurança privativas ou restritivas da liberdade com caráter perpétuo."
+        }
+      ],
+      "cited_articles": [
+        30
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de instituir a prisão perpétua contraria diretamente o princípio constitucional que proíbe penas com caráter perpétuo.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2475,
+        "output_tokens": 214,
+        "thinking_tokens": 0,
+        "total_tokens": 2689
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art27_n3",
+          "article": 27,
+          "score": 0.8831
+        },
+        {
+          "chunk_id": "art130",
+          "article": 130,
+          "score": 0.8671
+        },
+        {
+          "chunk_id": "art196",
+          "article": 196,
+          "score": 0.8605
+        },
+        {
+          "chunk_id": "art134",
+          "article": 134,
+          "score": 0.8591
+        },
+        {
+          "chunk_id": "art31",
+          "article": 31,
+          "score": 0.8586
+        },
+        {
+          "chunk_id": "art30",
+          "article": 30,
+          "score": 0.8568
+        },
+        {
+          "chunk_id": "art33_n3",
+          "article": 33,
+          "score": 0.8562
+        },
+        {
+          "chunk_id": "art207",
+          "article": 207,
+          "score": 0.8555
+        },
+        {
+          "chunk_id": "art28",
+          "article": 28,
+          "score": 0.8547
+        },
+        {
+          "chunk_id": "art27_n4",
+          "article": 27,
+          "score": 0.8547
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:44:24+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 3,
+      "set": "dev",
+      "proposal": "Permitir escutas telefónicas sem autorização de um juiz",
+      "expected_articles": [
+        34
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 2,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 34,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Estabelece a inviolabilidade do sigilo da correspondência e dos outros meios de comunicação privada."
+        },
+        {
+          "article": 34,
+          "n": 4,
+          "alinea": null,
+          "explanation": "Proíbe a ingerência das autoridades públicas nas telecomunicações, excetuando apenas os casos previstos na lei em matéria de processo criminal."
+        }
+      ],
+      "cited_articles": [
+        34
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de permitir escutas telefónicas sem autorização judicial apresenta um potencial conflito com as normas constitucionais relativas à inviolabilidade das comunicações.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2646,
+        "output_tokens": 304,
+        "thinking_tokens": 0,
+        "total_tokens": 2950
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art27_n3",
+          "article": 27,
+          "score": 0.856
+        },
+        {
+          "chunk_id": "art34",
+          "article": 34,
+          "score": 0.8513
+        },
+        {
+          "chunk_id": "art32_n9",
+          "article": 32,
+          "score": 0.8487
+        },
+        {
+          "chunk_id": "art204",
+          "article": 204,
+          "score": 0.8473
+        },
+        {
+          "chunk_id": "art283",
+          "article": 283,
+          "score": 0.846
+        },
+        {
+          "chunk_id": "art157",
+          "article": 157,
+          "score": 0.8446
+        },
+        {
+          "chunk_id": "art223_n2",
+          "article": 223,
+          "score": 0.844
+        },
+        {
+          "chunk_id": "art31",
+          "article": 31,
+          "score": 0.8429
+        },
+        {
+          "chunk_id": "art215",
+          "article": 215,
+          "score": 0.8426
+        },
+        {
+          "chunk_id": "art163",
+          "article": 163,
+          "score": 0.842
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:44:34+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 4,
+      "set": "dev",
+      "proposal": "Criar uma religião oficial do Estado",
+      "expected_articles": [
+        41
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 4,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 41,
+          "n": 4,
+          "alinea": null,
+          "explanation": "Estabelece que as igrejas e outras comunidades religiosas estão separadas do Estado."
+        },
+        {
+          "article": 288,
+          "n": null,
+          "alinea": "c",
+          "explanation": "Define a separação das Igrejas do Estado como um limite material da revisão constitucional."
+        },
+        {
+          "article": 41,
+          "n": 1,
+          "alinea": null,
+          "explanation": "referido no raciocínio"
+        }
+      ],
+      "cited_articles": [
+        41,
+        288
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de criar uma religião oficial do Estado apresenta um potencial conflito com o princípio de que as igrejas e comunidades religiosas estão separadas do Estado e com os limites materiais da revisão constitucional.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [
+        "citação acrescentada: artigo 41.º, n.º 1 (referido no texto)"
+      ],
+      "usage": {
+        "input_tokens": 2747,
+        "output_tokens": 336,
+        "thinking_tokens": 0,
+        "total_tokens": 3083
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art144",
+          "article": 144,
+          "score": 0.8685
+        },
+        {
+          "chunk_id": "art43",
+          "article": 43,
+          "score": 0.8657
+        },
+        {
+          "chunk_id": "art73",
+          "article": 73,
+          "score": 0.8641
+        },
+        {
+          "chunk_id": "art41",
+          "article": 41,
+          "score": 0.8631
+        },
+        {
+          "chunk_id": "art9",
+          "article": 9,
+          "score": 0.8615
+        },
+        {
+          "chunk_id": "art134",
+          "article": 134,
+          "score": 0.8613
+        },
+        {
+          "chunk_id": "art75",
+          "article": 75,
+          "score": 0.8598
+        },
+        {
+          "chunk_id": "art199",
+          "article": 199,
+          "score": 0.8592
+        },
+        {
+          "chunk_id": "art201",
+          "article": 201,
+          "score": 0.8591
+        },
+        {
+          "chunk_id": "art288",
+          "article": 288,
+          "score": 0.8581
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:44:48+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 5,
+      "set": "dev",
+      "proposal": "Obrigar os jornais a submeter artigos a aprovação prévia do Governo",
+      "expected_articles": [
+        37,
+        38
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 30,
+      "label": "unclear",
+      "label_ok": false,
+      "label_and_reason_ok": false,
+      "citations": [],
+      "cited_articles": [],
+      "expected_cited": false,
+      "summary": "A proposta refere-se à obrigatoriedade de os jornais submeterem artigos a aprovação prévia do Governo, uma matéria sobre a qual os excertos constitucionais fornecidos não contêm informação relevante.",
+      "missing_information": "Faltam excertos constitucionais relativos à liberdade de imprensa, à proibição de censura ou aos direitos, liberdades e garantias fundamentais dos cidadãos.",
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 3697,
+        "output_tokens": 207,
+        "thinking_tokens": 0,
+        "total_tokens": 3904
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art134",
+          "article": 134,
+          "score": 0.8777
+        },
+        {
+          "chunk_id": "art197_n1",
+          "article": 197,
+          "score": 0.8721
+        },
+        {
+          "chunk_id": "art192",
+          "article": 192,
+          "score": 0.8687
+        },
+        {
+          "chunk_id": "art119_n1",
+          "article": 119,
+          "score": 0.8683
+        },
+        {
+          "chunk_id": "art169_n1",
+          "article": 169,
+          "score": 0.8636
+        },
+        {
+          "chunk_id": "art161",
+          "article": 161,
+          "score": 0.8635
+        },
+        {
+          "chunk_id": "art288",
+          "article": 288,
+          "score": 0.8631
+        },
+        {
+          "chunk_id": "art168_n6",
+          "article": 168,
+          "score": 0.8612
+        },
+        {
+          "chunk_id": "art133",
+          "article": 133,
+          "score": 0.8611
+        },
+        {
+          "chunk_id": "art176",
+          "article": 176,
+          "score": 0.8603
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:45:04+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 6,
+      "set": "dev",
+      "proposal": "Proibir greves nos transportes públicos",
+      "expected_articles": [
+        57
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 57,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Estabelece que é garantido o direito à greve."
+        },
+        {
+          "article": 57,
+          "n": 2,
+          "alinea": null,
+          "explanation": "Determina que cabe aos trabalhadores definir o âmbito de interesses a defender através da greve, não podendo a lei limitar esse âmbito."
+        },
+        {
+          "article": 57,
+          "n": 3,
+          "alinea": null,
+          "explanation": "Prevê apenas a fixação de serviços mínimos para satisfazer necessidades sociais impreteríveis, e não a proibição total."
+        }
+      ],
+      "cited_articles": [
+        57
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de proibir greves nos transportes públicos apresenta um potencial conflito com a garantia geral do direito à greve estabelecida na Constituição.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 1941,
+        "output_tokens": 359,
+        "thinking_tokens": 0,
+        "total_tokens": 2300
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art57",
+          "article": 57,
+          "score": 0.8604
+        },
+        {
+          "chunk_id": "art53",
+          "article": 53,
+          "score": 0.8538
+        },
+        {
+          "chunk_id": "art270",
+          "article": 270,
+          "score": 0.8503
+        },
+        {
+          "chunk_id": "art269",
+          "article": 269,
+          "score": 0.8498
+        },
+        {
+          "chunk_id": "art89",
+          "article": 89,
+          "score": 0.8484
+        },
+        {
+          "chunk_id": "art257",
+          "article": 257,
+          "score": 0.8468
+        },
+        {
+          "chunk_id": "art180_n2",
+          "article": 180,
+          "score": 0.846
+        },
+        {
+          "chunk_id": "art188",
+          "article": 188,
+          "score": 0.8457
+        },
+        {
+          "chunk_id": "art267",
+          "article": 267,
+          "score": 0.8443
+        },
+        {
+          "chunk_id": "art59_n3",
+          "article": 59,
+          "score": 0.8431
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:45:11+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 7,
+      "set": "dev",
+      "proposal": "Tornar o ensino básico pago",
+      "expected_articles": [
+        74
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 74,
+          "n": 2,
+          "alinea": "a",
+          "explanation": "O artigo determina que o Estado deve assegurar o ensino básico universal, obrigatório e gratuito."
+        }
+      ],
+      "cited_articles": [
+        74
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de tornar o ensino básico pago entra em conflito direto com o princípio constitucional da gratuitidade do ensino básico.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2446,
+        "output_tokens": 188,
+        "thinking_tokens": 0,
+        "total_tokens": 2634
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art74",
+          "article": 74,
+          "score": 0.8613
+        },
+        {
+          "chunk_id": "art75",
+          "article": 75,
+          "score": 0.8544
+        },
+        {
+          "chunk_id": "art43",
+          "article": 43,
+          "score": 0.849
+        },
+        {
+          "chunk_id": "art76",
+          "article": 76,
+          "score": 0.8434
+        },
+        {
+          "chunk_id": "art67",
+          "article": 67,
+          "score": 0.8415
+        },
+        {
+          "chunk_id": "art73",
+          "article": 73,
+          "score": 0.84
+        },
+        {
+          "chunk_id": "art9",
+          "article": 9,
+          "score": 0.8366
+        },
+        {
+          "chunk_id": "art95",
+          "article": 95,
+          "score": 0.8362
+        },
+        {
+          "chunk_id": "art103",
+          "article": 103,
+          "score": 0.8362
+        },
+        {
+          "chunk_id": "art167_n4",
+          "article": 167,
+          "score": 0.8362
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:45:22+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 8,
+      "set": "dev",
+      "proposal": "Extinguir o Serviço Nacional de Saúde",
+      "expected_articles": [
+        64
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 64,
+          "n": 2,
+          "alinea": "a",
+          "explanation": "Estabelece que o direito à proteção da saúde é realizado através de um serviço nacional de saúde universal, geral e tendencialmente gratuito."
+        },
+        {
+          "article": 64,
+          "n": 3,
+          "alinea": "a",
+          "explanation": "Determina que incumbe prioritariamente ao Estado garantir o acesso de todos os cidadãos, independentemente da sua condição económica, aos cuidados da medicina preventiva, curativa e de reabilitação."
+        },
+        {
+          "article": 64,
+          "n": 3,
+          "alinea": "b",
+          "explanation": "Impõe ao Estado a garantia de uma racional e eficiente cobertura de todo o país em recursos humanos e unidades de saúde."
+        },
+        {
+          "article": 64,
+          "n": 4,
+          "alinea": null,
+          "explanation": "Define que o serviço nacional de saúde tem gestão descentralizada e participada."
+        },
+        {
+          "article": 165,
+          "n": 1,
+          "alinea": "f",
+          "explanation": "Atribui à Assembleia da República a competência legislativa exclusiva sobre as bases do serviço nacional de saúde."
+        }
+      ],
+      "cited_articles": [
+        64,
+        165
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de extinção do Serviço Nacional de Saúde entra em potencial conflito com os artigos constitucionais que consagram a existência e os princípios fundamentais de um serviço nacional de saúde.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2926,
+        "output_tokens": 563,
+        "thinking_tokens": 0,
+        "total_tokens": 3489
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art64_n4",
+          "article": 64,
+          "score": 0.8745
+        },
+        {
+          "chunk_id": "art64_n3",
+          "article": 64,
+          "score": 0.8683
+        },
+        {
+          "chunk_id": "art64_n2",
+          "article": 64,
+          "score": 0.8642
+        },
+        {
+          "chunk_id": "art276",
+          "article": 276,
+          "score": 0.855
+        },
+        {
+          "chunk_id": "art27_n3",
+          "article": 27,
+          "score": 0.854
+        },
+        {
+          "chunk_id": "art227_n1_i-q",
+          "article": 227,
+          "score": 0.8539
+        },
+        {
+          "chunk_id": "art19_n7",
+          "article": 19,
+          "score": 0.8533
+        },
+        {
+          "chunk_id": "art38_n5",
+          "article": 38,
+          "score": 0.8527
+        },
+        {
+          "chunk_id": "art288",
+          "article": 288,
+          "score": 0.8521
+        },
+        {
+          "chunk_id": "art165_n1_a-o",
+          "article": 165,
+          "score": 0.851
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:45:27+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 9,
+      "set": "dev",
+      "proposal": "Reduzir o número de deputados para 150",
+      "expected_articles": [
+        148
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 148,
+          "n": null,
+          "alinea": null,
+          "explanation": "Estabelece que a Assembleia da República tem o mínimo de cento e oitenta e o máximo de duzentos e trinta Deputados, o que contraria a proposta de fixar o número em 150."
+        }
+      ],
+      "cited_articles": [
+        148
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de reduzir o número de deputados para 150 entra em conflito direto com o limite mínimo de membros estabelecido na Constituição.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 1955,
+        "output_tokens": 243,
+        "thinking_tokens": 0,
+        "total_tokens": 2198
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art148",
+          "article": 148,
+          "score": 0.8785
+        },
+        {
+          "chunk_id": "art152",
+          "article": 152,
+          "score": 0.8706
+        },
+        {
+          "chunk_id": "art171",
+          "article": 171,
+          "score": 0.867
+        },
+        {
+          "chunk_id": "art160",
+          "article": 160,
+          "score": 0.8653
+        },
+        {
+          "chunk_id": "art154",
+          "article": 154,
+          "score": 0.8642
+        },
+        {
+          "chunk_id": "art159",
+          "article": 159,
+          "score": 0.8634
+        },
+        {
+          "chunk_id": "art155",
+          "article": 155,
+          "score": 0.8632
+        },
+        {
+          "chunk_id": "art153",
+          "article": 153,
+          "score": 0.8618
+        },
+        {
+          "chunk_id": "art170",
+          "article": 170,
+          "score": 0.86
+        },
+        {
+          "chunk_id": "art15",
+          "article": 15,
+          "score": 0.8592
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:45:36+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 10,
+      "set": "dev",
+      "proposal": "Permitir que o Presidente da República cumpra três mandatos seguidos",
+      "expected_articles": [
+        123
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 2,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 123,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Estabelece a proibição de um terceiro mandato consecutivo para o Presidente da República."
+        }
+      ],
+      "cited_articles": [
+        123
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de permitir três mandatos seguidos para o Presidente da República entra em conflito direto com as regras de limitação de mandatos previstas na Constituição.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2710,
+        "output_tokens": 186,
+        "thinking_tokens": 0,
+        "total_tokens": 2896
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art223_n2",
+          "article": 223,
+          "score": 0.8871
+        },
+        {
+          "chunk_id": "art123",
+          "article": 123,
+          "score": 0.882
+        },
+        {
+          "chunk_id": "art134",
+          "article": 134,
+          "score": 0.8799
+        },
+        {
+          "chunk_id": "art128",
+          "article": 128,
+          "score": 0.8787
+        },
+        {
+          "chunk_id": "art136_n5",
+          "article": 136,
+          "score": 0.8773
+        },
+        {
+          "chunk_id": "art130",
+          "article": 130,
+          "score": 0.8747
+        },
+        {
+          "chunk_id": "art163",
+          "article": 163,
+          "score": 0.8747
+        },
+        {
+          "chunk_id": "art127",
+          "article": 127,
+          "score": 0.8734
+        },
+        {
+          "chunk_id": "art179",
+          "article": 179,
+          "score": 0.8721
+        },
+        {
+          "chunk_id": "art132",
+          "article": 132,
+          "score": 0.872
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:45:43+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 11,
+      "set": "dev",
+      "proposal": "Expulsar do país cidadãos portugueses condenados por crimes graves",
+      "expected_articles": [
+        33
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 33,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Estabelece claramente que não é admitida a expulsão de cidadãos portugueses do território nacional."
+        },
+        {
+          "article": 33,
+          "n": 3,
+          "alinea": null,
+          "explanation": "Regula a extradição de cidadãos portugueses, delimitando-a a casos muito restritos e sob convenção internacional, o qual constitui um procedimento diferente da expulsão."
+        }
+      ],
+      "cited_articles": [
+        33
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de expulsar cidadãos portugueses do território nacional entra em conflito direto com a proibição expressa de expulsão de nacionais.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2230,
+        "output_tokens": 319,
+        "thinking_tokens": 0,
+        "total_tokens": 2549
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art33_n3",
+          "article": 33,
+          "score": 0.8764
+        },
+        {
+          "chunk_id": "art33_n4",
+          "article": 33,
+          "score": 0.8673
+        },
+        {
+          "chunk_id": "art33_n1",
+          "article": 33,
+          "score": 0.866
+        },
+        {
+          "chunk_id": "art15",
+          "article": 15,
+          "score": 0.8607
+        },
+        {
+          "chunk_id": "art33_n8",
+          "article": 33,
+          "score": 0.8598
+        },
+        {
+          "chunk_id": "art27_n3",
+          "article": 27,
+          "score": 0.8585
+        },
+        {
+          "chunk_id": "art33_n2",
+          "article": 33,
+          "score": 0.8583
+        },
+        {
+          "chunk_id": "art134",
+          "article": 134,
+          "score": 0.8573
+        },
+        {
+          "chunk_id": "art4",
+          "article": 4,
+          "score": 0.8552
+        },
+        {
+          "chunk_id": "art14",
+          "article": 14,
+          "score": 0.8539
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:45:50+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 12,
+      "set": "dev",
+      "proposal": "Aumentar o investimento público em energias renováveis",
+      "expected_articles": [
+        66,
+        81
+      ],
+      "acceptable_labels": [
+        "likely_compatible"
+      ],
+      "note": "81.º m) is national energy policy; added after run 1 on legal grounds, not on score.",
+      "rank": 1,
+      "label": "likely_compatible",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 81,
+          "n": null,
+          "alinea": "m",
+          "explanation": "Atribui ao Estado a incumbência prioritária de adotar uma política nacional de energia que preserve os recursos naturais e o equilíbrio ecológico."
+        },
+        {
+          "article": 66,
+          "n": 2,
+          "alinea": "d",
+          "explanation": "Estabelece como tarefa do Estado promover o aproveitamento racional dos recursos naturais, salvaguardando a capacidade de renovação e a estabilidade ecológica."
+        }
+      ],
+      "cited_articles": [
+        66,
+        81
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de aumentar o investimento público em energias renováveis encontra enquadramento nas incumbências prioritárias do Estado relativas à política energética e ao desenvolvimento sustentável.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 3563,
+        "output_tokens": 329,
+        "thinking_tokens": 0,
+        "total_tokens": 3892
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art81",
+          "article": 81,
+          "score": 0.8394
+        },
+        {
+          "chunk_id": "art288",
+          "article": 288,
+          "score": 0.8361
+        },
+        {
+          "chunk_id": "art197_n1",
+          "article": 197,
+          "score": 0.8357
+        },
+        {
+          "chunk_id": "art227_n1_i-q",
+          "article": 227,
+          "score": 0.8349
+        },
+        {
+          "chunk_id": "art89",
+          "article": 89,
+          "score": 0.8342
+        },
+        {
+          "chunk_id": "art66_n2",
+          "article": 66,
+          "score": 0.8342
+        },
+        {
+          "chunk_id": "art227_n1_r-x",
+          "article": 227,
+          "score": 0.8339
+        },
+        {
+          "chunk_id": "art109",
+          "article": 109,
+          "score": 0.8337
+        },
+        {
+          "chunk_id": "art106",
+          "article": 106,
+          "score": 0.8334
+        },
+        {
+          "chunk_id": "art52",
+          "article": 52,
+          "score": 0.832
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:46:01+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 20,
+      "set": "dev",
+      "proposal": "Baixar a idade mínima de voto para os 16 anos",
+      "expected_articles": [
+        49
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "note": "Moved to dev: already seen (Art. 49 at rank 9).",
+      "rank": 9,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 49,
+          "n": 1,
+          "alinea": null,
+          "explanation": "O artigo estabelece que o direito de sufrágio pertence aos cidadãos maiores de dezoito anos, o que entra em conflito com a proposta de baixar a idade para os 16 anos."
+        }
+      ],
+      "cited_articles": [
+        49
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de baixar a idade mínima de voto para os 16 anos entra em potencial conflito com o artigo 49.º, n.º 1, que fixa a maioridade de dezoito anos para o direito de sufrágio.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 1750,
+        "output_tokens": 238,
+        "thinking_tokens": 0,
+        "total_tokens": 1988
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art126",
+          "article": 126,
+          "score": 0.8768
+        },
+        {
+          "chunk_id": "art122",
+          "article": 122,
+          "score": 0.8755
+        },
+        {
+          "chunk_id": "art152",
+          "article": 152,
+          "score": 0.8701
+        },
+        {
+          "chunk_id": "art148",
+          "article": 148,
+          "score": 0.8678
+        },
+        {
+          "chunk_id": "art113",
+          "article": 113,
+          "score": 0.8646
+        },
+        {
+          "chunk_id": "art128",
+          "article": 128,
+          "score": 0.8639
+        },
+        {
+          "chunk_id": "art167_n6",
+          "article": 167,
+          "score": 0.8614
+        },
+        {
+          "chunk_id": "art171",
+          "article": 171,
+          "score": 0.8608
+        },
+        {
+          "chunk_id": "art49",
+          "article": 49,
+          "score": 0.8604
+        },
+        {
+          "chunk_id": "art124",
+          "article": 124,
+          "score": 0.8603
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:46:13+00:00",
+      "frozen_at": "2026-10-27T15:50:26+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 35,
+      "set": "dev",
+      "proposal": "Exigir autorização prévia do Estado para publicar livros",
+      "expected_articles": [
+        37,
+        42
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "note": "Censorship without the word “censura” (like case 5)",
+      "rank": null,
+      "label": "unclear",
+      "label_ok": false,
+      "label_and_reason_ok": false,
+      "citations": [],
+      "cited_articles": [],
+      "expected_cited": false,
+      "summary": "A proposta é demasiado vaga e os excertos fornecidos não contêm elementos suficientes para a avaliar em relação à liberdade de publicação de livros.",
+      "missing_information": "Faltam excertos constitucionais referentes à liberdade de expressão, à liberdade de imprensa e à proibição de censura (como normas sobre a liberdade de pensamento e de expressão).",
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2151,
+        "output_tokens": 177,
+        "thinking_tokens": 0,
+        "total_tokens": 2328
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art73",
+          "article": 73,
+          "score": 0.8526
+        },
+        {
+          "chunk_id": "art165_n3",
+          "article": 165,
+          "score": 0.8523
+        },
+        {
+          "chunk_id": "art165_n4",
+          "article": 165,
+          "score": 0.8516
+        },
+        {
+          "chunk_id": "art227_n2",
+          "article": 227,
+          "score": 0.8511
+        },
+        {
+          "chunk_id": "art74",
+          "article": 74,
+          "score": 0.851
+        },
+        {
+          "chunk_id": "art112_n2",
+          "article": 112,
+          "score": 0.8509
+        },
+        {
+          "chunk_id": "art233",
+          "article": 233,
+          "score": 0.8506
+        },
+        {
+          "chunk_id": "art278_n4",
+          "article": 278,
+          "score": 0.8501
+        },
+        {
+          "chunk_id": "art138",
+          "article": 138,
+          "score": 0.8501
+        },
+        {
+          "chunk_id": "art38_n5",
+          "article": 38,
+          "score": 0.8495
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:46:21+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 36,
+      "set": "dev",
+      "proposal": "Permitir à polícia entrar em casas durante a noite sem mandado",
+      "expected_articles": [
+        34
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "note": "“casas” vs “domicílio”",
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 34,
+          "n": 3,
+          "alinea": null,
+          "explanation": "Define que a entrada noturna no domicílio sem consentimento só é permitida em flagrante delito ou mediante autorização judicial em casos de criminalidade especialmente violenta ou altamente organizada."
+        },
+        {
+          "article": 272,
+          "n": 3,
+          "alinea": null,
+          "explanation": "Estabelece que a prevenção de crimes pelas autoridades policiais deve respeitar os direitos, liberdades e garantias dos cidadãos."
+        }
+      ],
+      "cited_articles": [
+        34,
+        272
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de permitir à polícia entrar em casas durante a noite sem mandado entra em potencial conflito com as regras constitucionais de inviolabilidade do domicílio.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2226,
+        "output_tokens": 356,
+        "thinking_tokens": 0,
+        "total_tokens": 2582
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art34",
+          "article": 34,
+          "score": 0.8758
+        },
+        {
+          "chunk_id": "art27_n3",
+          "article": 27,
+          "score": 0.8544
+        },
+        {
+          "chunk_id": "art272",
+          "article": 272,
+          "score": 0.8501
+        },
+        {
+          "chunk_id": "art33_n2",
+          "article": 33,
+          "score": 0.8463
+        },
+        {
+          "chunk_id": "art45",
+          "article": 45,
+          "score": 0.8438
+        },
+        {
+          "chunk_id": "art28",
+          "article": 28,
+          "score": 0.8418
+        },
+        {
+          "chunk_id": "art27_n4",
+          "article": 27,
+          "score": 0.8406
+        },
+        {
+          "chunk_id": "art29",
+          "article": 29,
+          "score": 0.8396
+        },
+        {
+          "chunk_id": "art19_n2",
+          "article": 19,
+          "score": 0.8394
+        },
+        {
+          "chunk_id": "art19_n6",
+          "article": 19,
+          "score": 0.8383
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:46:34+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 37,
+      "set": "dev",
+      "proposal": "Tirar os filhos aos pais sem decisão de um tribunal",
+      "expected_articles": [
+        36
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "note": "Art. 36 n.º6, colloquial wording",
+      "rank": 4,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 36,
+          "n": 6,
+          "alinea": null,
+          "explanation": "Estabelece que a separação entre filhos e pais apenas pode ocorrer por incumprimento de deveres fundamentais e obrigatoriamente mediante decisão judicial."
+        }
+      ],
+      "cited_articles": [
+        36
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de retirar os filhos aos pais sem decisão de um tribunal entra em conflito direto com as garantias constitucionais relativas à proteção da família e à separação de menores.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2491,
+        "output_tokens": 226,
+        "thinking_tokens": 0,
+        "total_tokens": 2717
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art67",
+          "article": 67,
+          "score": 0.847
+        },
+        {
+          "chunk_id": "art205",
+          "article": 205,
+          "score": 0.8457
+        },
+        {
+          "chunk_id": "art33_n2",
+          "article": 33,
+          "score": 0.8449
+        },
+        {
+          "chunk_id": "art36",
+          "article": 36,
+          "score": 0.8435
+        },
+        {
+          "chunk_id": "art32_n9",
+          "article": 32,
+          "score": 0.8432
+        },
+        {
+          "chunk_id": "art206",
+          "article": 206,
+          "score": 0.8423
+        },
+        {
+          "chunk_id": "art27_n3",
+          "article": 27,
+          "score": 0.8412
+        },
+        {
+          "chunk_id": "art33_n6",
+          "article": 33,
+          "score": 0.8412
+        },
+        {
+          "chunk_id": "art74",
+          "article": 74,
+          "score": 0.8408
+        },
+        {
+          "chunk_id": "art157",
+          "article": 157,
+          "score": 0.8407
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:46:42+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 38,
+      "set": "dev",
+      "proposal": "Permitir despedir trabalhadores por causa das suas opiniões políticas",
+      "expected_articles": [
+        53
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "note": "“despedir” vs “segurança no emprego”",
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 53,
+          "n": null,
+          "alinea": null,
+          "explanation": "Estabelece a garantia de segurança no emprego e a proibição expressa de despedimentos por motivos políticos ou ideológicos."
+        },
+        {
+          "article": 59,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Garante os direitos dos trabalhadores sem distinção de convicções políticas ou ideológicas."
+        }
+      ],
+      "cited_articles": [
+        53,
+        59
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de permitir despedimentos com base em opiniões políticas entra em conflito direto com as normas constitucionais que proíbem despedimentos por motivos políticos e garantem a igualdade de convicções.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2826,
+        "output_tokens": 289,
+        "thinking_tokens": 0,
+        "total_tokens": 3115
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art53",
+          "article": 53,
+          "score": 0.8691
+        },
+        {
+          "chunk_id": "art276",
+          "article": 276,
+          "score": 0.8583
+        },
+        {
+          "chunk_id": "art59_n1",
+          "article": 59,
+          "score": 0.8551
+        },
+        {
+          "chunk_id": "art288",
+          "article": 288,
+          "score": 0.8526
+        },
+        {
+          "chunk_id": "art59_n2",
+          "article": 59,
+          "score": 0.8516
+        },
+        {
+          "chunk_id": "art195",
+          "article": 195,
+          "score": 0.8515
+        },
+        {
+          "chunk_id": "art58",
+          "article": 58,
+          "score": 0.8512
+        },
+        {
+          "chunk_id": "art15",
+          "article": 15,
+          "score": 0.8479
+        },
+        {
+          "chunk_id": "art270",
+          "article": 270,
+          "score": 0.8477
+        },
+        {
+          "chunk_id": "art54",
+          "article": 54,
+          "score": 0.847
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:46:50+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 39,
+      "set": "dev",
+      "proposal": "Confiscar terrenos privados sem pagar nada aos donos",
+      "expected_articles": [
+        62
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "note": "“confiscar” vs “expropriação”",
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 62,
+          "n": 2,
+          "alinea": null,
+          "explanation": "Estabelece que a expropriação por utilidade pública tem de ser feita mediante o pagamento de justa indemnização."
+        },
+        {
+          "article": 94,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Garante o direito do proprietário à correspondente indemnização em caso de expropriação de terras agrícolas."
+        },
+        {
+          "article": 62,
+          "n": 1,
+          "alinea": null,
+          "explanation": "referido no raciocínio"
+        }
+      ],
+      "cited_articles": [
+        62,
+        94
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de confiscar terrenos privados sem qualquer pagamento entra em conflito direto com as garantias constitucionais do direito de propriedade privada e com as regras aplicáveis às expropriações.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [
+        "citação acrescentada: artigo 62.º, n.º 1 (referido no texto)"
+      ],
+      "usage": {
+        "input_tokens": 2764,
+        "output_tokens": 327,
+        "thinking_tokens": 0,
+        "total_tokens": 3091
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art62",
+          "article": 62,
+          "score": 0.8469
+        },
+        {
+          "chunk_id": "art86",
+          "article": 86,
+          "score": 0.844
+        },
+        {
+          "chunk_id": "art94",
+          "article": 94,
+          "score": 0.8431
+        },
+        {
+          "chunk_id": "art96",
+          "article": 96,
+          "score": 0.8429
+        },
+        {
+          "chunk_id": "art95",
+          "article": 95,
+          "score": 0.838
+        },
+        {
+          "chunk_id": "art66_n2",
+          "article": 66,
+          "score": 0.8369
+        },
+        {
+          "chunk_id": "art84",
+          "article": 84,
+          "score": 0.8368
+        },
+        {
+          "chunk_id": "art293_n2",
+          "article": 293,
+          "score": 0.8363
+        },
+        {
+          "chunk_id": "art81",
+          "article": 81,
+          "score": 0.8338
+        },
+        {
+          "chunk_id": "art293_n1",
+          "article": 293,
+          "score": 0.8329
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:47:01+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 40,
+      "set": "dev",
+      "proposal": "Proibir casamentos entre pessoas de nacionalidades diferentes",
+      "expected_articles": [
+        36,
+        13
+      ],
+      "acceptable_labels": [
+        "potential_conflict"
+      ],
+      "note": "Two articles needed",
+      "rank": 1,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 36,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Garante a todos o direito de constituir família e contrair casamento em condições de plena igualdade, o que pode ser violado pela restrição com base na nacionalidade."
+        },
+        {
+          "article": 13,
+          "n": 2,
+          "alinea": null,
+          "explanation": "Estabelece o princípio da igualdade e proíbe discriminações, protegendo os cidadãos de serem privados de direitos."
+        }
+      ],
+      "cited_articles": [
+        13,
+        36
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de proibir casamentos entre pessoas de nacionalidades diferentes apresenta um potencial conflito com o direito de constituir família e com o princípio da igualdade previstos na Constituição.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2127,
+        "output_tokens": 330,
+        "thinking_tokens": 0,
+        "total_tokens": 2457
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art36",
+          "article": 36,
+          "score": 0.8641
+        },
+        {
+          "chunk_id": "art15",
+          "article": 15,
+          "score": 0.8572
+        },
+        {
+          "chunk_id": "art13",
+          "article": 13,
+          "score": 0.8475
+        },
+        {
+          "chunk_id": "art35_n5",
+          "article": 35,
+          "score": 0.8473
+        },
+        {
+          "chunk_id": "art115_n1",
+          "article": 115,
+          "score": 0.8466
+        },
+        {
+          "chunk_id": "art65_n1",
+          "article": 65,
+          "score": 0.8463
+        },
+        {
+          "chunk_id": "art44",
+          "article": 44,
+          "score": 0.8463
+        },
+        {
+          "chunk_id": "art67",
+          "article": 67,
+          "score": 0.846
+        },
+        {
+          "chunk_id": "art154",
+          "article": 154,
+          "score": 0.8455
+        },
+        {
+          "chunk_id": "art152",
+          "article": 152,
+          "score": 0.845
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:47:09+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 41,
+      "set": "dev",
+      "proposal": "Proibir o ensino privado",
+      "expected_articles": [
+        43,
+        75
+      ],
+      "acceptable_labels": [
+        "potential_conflict",
+        "unclear"
+      ],
+      "note": "Borderline",
+      "rank": 2,
+      "label": "potential_conflict",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 43,
+          "n": 4,
+          "alinea": null,
+          "explanation": "Garante o direito de criação de escolas particulares e cooperativas, o qual seria violado pela proibição do ensino privado."
+        },
+        {
+          "article": 75,
+          "n": 2,
+          "alinea": null,
+          "explanation": "Estabelece que o Estado reconhece e fiscaliza o ensino particular e cooperativo, demonstrando a sua legitimidade constitucional."
+        }
+      ],
+      "cited_articles": [
+        43,
+        75
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de proibir o ensino privado entra em potencial conflito com preceitos constitucionais que garantem expressamente a criação e a existência desse tipo de ensino.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2493,
+        "output_tokens": 295,
+        "thinking_tokens": 0,
+        "total_tokens": 2788
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art74",
+          "article": 74,
+          "score": 0.8894
+        },
+        {
+          "chunk_id": "art43",
+          "article": 43,
+          "score": 0.8804
+        },
+        {
+          "chunk_id": "art75",
+          "article": 75,
+          "score": 0.8771
+        },
+        {
+          "chunk_id": "art76",
+          "article": 76,
+          "score": 0.8643
+        },
+        {
+          "chunk_id": "art77",
+          "article": 77,
+          "score": 0.8623
+        },
+        {
+          "chunk_id": "art64_n3",
+          "article": 64,
+          "score": 0.8622
+        },
+        {
+          "chunk_id": "art73",
+          "article": 73,
+          "score": 0.8617
+        },
+        {
+          "chunk_id": "art70",
+          "article": 70,
+          "score": 0.8584
+        },
+        {
+          "chunk_id": "art66_n2",
+          "article": 66,
+          "score": 0.8574
+        },
+        {
+          "chunk_id": "art62",
+          "article": 62,
+          "score": 0.8573
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:47:18+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 42,
+      "set": "dev",
+      "proposal": "Criar uma rede de creches públicas",
+      "expected_articles": [
+        67
+      ],
+      "acceptable_labels": [
+        "likely_compatible"
+      ],
+      "note": "Compatible, Art. 67 n.º2",
+      "rank": 10,
+      "label": "likely_compatible",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 67,
+          "n": 2,
+          "alinea": "b",
+          "explanation": "Determina que o Estado deve promover a criação e garantir o acesso a uma rede nacional de creches e outros equipamentos sociais de apoio à família."
+        },
+        {
+          "article": 74,
+          "n": 2,
+          "alinea": "b",
+          "explanation": "Incumbe ao Estado criar um sistema público e desenvolver o sistema geral de educação pré-escolar."
+        }
+      ],
+      "cited_articles": [
+        67,
+        74
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de criar uma rede de creches públicas é compatível com os princípios constitucionais de proteção da família e do ensino.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 2252,
+        "output_tokens": 291,
+        "thinking_tokens": 0,
+        "total_tokens": 2543
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art75",
+          "article": 75,
+          "score": 0.8655
+        },
+        {
+          "chunk_id": "art43",
+          "article": 43,
+          "score": 0.8509
+        },
+        {
+          "chunk_id": "art144",
+          "article": 144,
+          "score": 0.8507
+        },
+        {
+          "chunk_id": "art74",
+          "article": 74,
+          "score": 0.8503
+        },
+        {
+          "chunk_id": "art255",
+          "article": 255,
+          "score": 0.8483
+        },
+        {
+          "chunk_id": "art257",
+          "article": 257,
+          "score": 0.8464
+        },
+        {
+          "chunk_id": "art247",
+          "article": 247,
+          "score": 0.8463
+        },
+        {
+          "chunk_id": "art267",
+          "article": 267,
+          "score": 0.8462
+        },
+        {
+          "chunk_id": "art73",
+          "article": 73,
+          "score": 0.8457
+        },
+        {
+          "chunk_id": "art67",
+          "article": 67,
+          "score": 0.845
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:47:29+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 43,
+      "set": "dev",
+      "proposal": "Apoiar os agricultores contra prejuízos causados por secas",
+      "expected_articles": [
+        93,
+        97
+      ],
+      "acceptable_labels": [
+        "likely_compatible"
+      ],
+      "note": "Compatible, economic part of the Constitution",
+      "rank": 1,
+      "label": "likely_compatible",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 97,
+          "n": 2,
+          "alinea": "c",
+          "explanation": "Estabelece que o apoio do Estado compreende o apoio à cobertura de riscos resultantes de acidentes climatéricos imprevisíveis ou incontroláveis."
+        },
+        {
+          "article": 97,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Define que o Estado apoiará os agricultores, nomeadamente os pequenos e médios, na prossecução dos objetivos da política agrícola."
+        }
+      ],
+      "cited_articles": [
+        97
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de apoiar os agricultores contra prejuízos causados por secas é compatível com os princípios constitucionais relativos aos objetivos e auxílios do Estado na política agrícola.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 3132,
+        "output_tokens": 347,
+        "thinking_tokens": 0,
+        "total_tokens": 3479
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art97",
+          "article": 97,
+          "score": 0.8698
+        },
+        {
+          "chunk_id": "art93_n1",
+          "article": 93,
+          "score": 0.8564
+        },
+        {
+          "chunk_id": "art98",
+          "article": 98,
+          "score": 0.8453
+        },
+        {
+          "chunk_id": "art95",
+          "article": 95,
+          "score": 0.8446
+        },
+        {
+          "chunk_id": "art94",
+          "article": 94,
+          "score": 0.8411
+        },
+        {
+          "chunk_id": "art66_n2",
+          "article": 66,
+          "score": 0.8407
+        },
+        {
+          "chunk_id": "art63",
+          "article": 63,
+          "score": 0.8393
+        },
+        {
+          "chunk_id": "art223_n2",
+          "article": 223,
+          "score": 0.8386
+        },
+        {
+          "chunk_id": "art9",
+          "article": 9,
+          "score": 0.8382
+        },
+        {
+          "chunk_id": "art67",
+          "article": 67,
+          "score": 0.8365
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:47:40+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 44,
+      "set": "dev",
+      "proposal": "Proibir a publicidade enganosa",
+      "expected_articles": [
+        60
+      ],
+      "acceptable_labels": [
+        "likely_compatible"
+      ],
+      "note": "Compatible, consumer rights",
+      "rank": 1,
+      "label": "likely_compatible",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 60,
+          "n": 1,
+          "alinea": null,
+          "explanation": "Estabelece o direito dos consumidores à proteção dos seus interesses económicos."
+        },
+        {
+          "article": 60,
+          "n": 2,
+          "alinea": null,
+          "explanation": "Prevê a disciplina legal da publicidade e a proibição de formas de publicidade dolosa ou enganosa."
+        }
+      ],
+      "cited_articles": [
+        60
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de proibir a publicidade enganosa enquadra-se na proteção dos consumidores e não revela conflito com os excertos fornecidos.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 1880,
+        "output_tokens": 283,
+        "thinking_tokens": 0,
+        "total_tokens": 2163
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art60",
+          "article": 60,
+          "score": 0.8517
+        },
+        {
+          "chunk_id": "art119_n2",
+          "article": 119,
+          "score": 0.8511
+        },
+        {
+          "chunk_id": "art119_n3",
+          "article": 119,
+          "score": 0.8507
+        },
+        {
+          "chunk_id": "art35_n4",
+          "article": 35,
+          "score": 0.8427
+        },
+        {
+          "chunk_id": "art32_n2",
+          "article": 32,
+          "score": 0.8399
+        },
+        {
+          "chunk_id": "art281_n2",
+          "article": 281,
+          "score": 0.8393
+        },
+        {
+          "chunk_id": "art167_n6",
+          "article": 167,
+          "score": 0.839
+        },
+        {
+          "chunk_id": "art38_n3",
+          "article": 38,
+          "score": 0.8374
+        },
+        {
+          "chunk_id": "art137",
+          "article": 137,
+          "score": 0.8371
+        },
+        {
+          "chunk_id": "art223_n2",
+          "article": 223,
+          "score": 0.8371
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:47:48+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    },
+    {
+      "id": 45,
+      "set": "dev",
+      "proposal": "Aumentar o IVA da restauração",
+      "expected_articles": [
+        103,
+        104
+      ],
+      "acceptable_labels": [
+        "unclear",
+        "likely_compatible"
+      ],
+      "note": "Ordinary policy the Constitution barely covers",
+      "rank": 6,
+      "label": "likely_compatible",
+      "label_ok": true,
+      "label_and_reason_ok": true,
+      "citations": [
+        {
+          "article": 104,
+          "n": 4,
+          "alinea": null,
+          "explanation": "Estabelece que a tributação do consumo visa adaptar a estrutura do consumo à evolução das necessidades do desenvolvimento económico e da justiça social."
+        },
+        {
+          "article": 81,
+          "n": null,
+          "alinea": "a",
+          "explanation": "Incumbe prioritariamente ao Estado promover o bem-estar económico e social e a qualidade de vida."
+        }
+      ],
+      "cited_articles": [
+        81,
+        104
+      ],
+      "expected_cited": true,
+      "summary": "A proposta de aumentar o IVA da restauração enquadra-se nas competências de política fiscal e económica do Estado, visando a adaptação da estrutura do consumo.",
+      "missing_information": null,
+      "rejected_citations": [],
+      "rejected_references": [],
+      "validation_notes": [],
+      "usage": {
+        "input_tokens": 3462,
+        "output_tokens": 316,
+        "thinking_tokens": 0,
+        "total_tokens": 3778
+      },
+      "cached": false,
+      "top_retrieved": [
+        {
+          "chunk_id": "art66_n2",
+          "article": 66,
+          "score": 0.8476
+        },
+        {
+          "chunk_id": "art95",
+          "article": 95,
+          "score": 0.8448
+        },
+        {
+          "chunk_id": "art81",
+          "article": 81,
+          "score": 0.8447
+        },
+        {
+          "chunk_id": "art293_n1",
+          "article": 293,
+          "score": 0.844
+        },
+        {
+          "chunk_id": "art59_n2",
+          "article": 59,
+          "score": 0.8429
+        },
+        {
+          "chunk_id": "art104",
+          "article": 104,
+          "score": 0.8413
+        },
+        {
+          "chunk_id": "art161",
+          "article": 161,
+          "score": 0.8398
+        },
+        {
+          "chunk_id": "art227_n1_i-q",
+          "article": 227,
+          "score": 0.8388
+        },
+        {
+          "chunk_id": "art78",
+          "article": 78,
+          "score": 0.8361
+        },
+        {
+          "chunk_id": "art165_n5",
+          "article": 165,
+          "score": 0.836
+        }
+      ],
+      "answer_created_at": "2026-10-27T17:48:05+00:00",
+      "frozen_at": "2026-10-27T16:16:02+00:00",
+      "answer_before_freeze": false
+    }
+  ]
+}
